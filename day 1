@@ -1,0 +1,158 @@
+Day 1 
+Date is 22/09/24
+
+1. what is data structure? and its classification?
+Ans:- organized collection of data in a particular formate is called data structure.
+      It is a technique or method of study how the data or inter-related to each other logically or mathematically.
+
+2. Aim of data ?
+Ans:- it increase efficiency of program and does decrease to store requirement.
+
+3. what is data ?
+Ans:- collection of row facts is called data.
+
+4. And its classification- In three parts classified to data structure.
+--------------------------------------------------------------------------
+
+1. linear data structure 2. non linear data structure
+3. homogenous and hetrogenous 4. static and dynamic data structure.
+
+1. linear data structure coming under like 1. array 2. stack 3. queue 4. linked list
+
+2. non-linear coming under data structure like 1. tree 2. graph
+
+3. homogenous like array
+
+4. hetrogenous like structure and union
+
+5. static-: we work in it fixed size of memory
+
+6. dynamic data structure-: we need it (we can increase of memory our requirement).
+
+------------------------------------------------------------------------------------------
+
+2.1.) what is searching in data structure? with types
+Ans:- searching is a method to finding an element from data structure with their appropriate location. 
+
+= Types of searching ?
+Two types of seaching 
+1. linear search 
+2. binary search
+
+2. what is linear search ? wrtie algorithm and program?
+Ans:- It is a very basic and simple search algorithm. In linear search we search an element in given arrray by traversing the array from the starting till the desired element is found 
+
+
+Algorithm of linear search
+--------------------------
+
+step 1. Begin
+step 2. set a[5]<- {10,20,30,40,50}
+step 3. set i<- 0
+step 4. input seaching item
+step 5. Repeat step 6 and 7 while i<5
+step 6. if a[i]= item then  
+        print item found and location=i and exit
+step 7. i<- i+1
+step 8. if i>=5 then
+        print item not found 
+step 9: end
+
+--------------------------------------------------------
+
+Program of linear search
+-------------------------
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int a[5]= {10,20,30,40,50},i=0, item;
+printf("input seaching item----");
+scanf("%d", & item);
+while(i<5)
+{
+if(a[i]== item)
+{
+printf("item found location=%d",i);
+break;
+}
+i++;
+}
+if(i>=5)
+printf("item not found");
+getch();
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+= 2nd types binary search
+------------------------------
+
+1. what is bineary search ? write algorithm and program?
+Ans:- It is devide an conquer, seaching tecnique in which we have to arrange the data in particular order before seaching operation. After that we find the middle element of array an compare
+with target element.
+It item not found then we again check the target element is greater than or less than  middle element , if it greater thanwe seach right side of middle element otherwise left side of middle e
+middle.
+
+Algorithm
+------------
+
+step 1: Begin
+step 2. set a[5]<- {10,20,30,40,50}
+step 3. set lr<-0, up<-4, f<-0
+step 4. input seaching item
+step 5. Repeat 6 and 8 while(lr<=up)
+step 6. set mid<- lr+up/2;
+step 7. if a[mid]=item then
+        set f=1 and break
+step 8. if a[mid]<item then 
+        set lr<-mid+1
+         else
+       set up<- mid-1
+step 9. if f=1 then
+        print item found with loc=mid
+           else
+     print not found
+step 10 exit
+
+
+
+-------------------------------------------------------------------------
+
+
+progrm of c for binary search
+-------------------------------
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[5]={10,20,30,40,50}, lr=0 , up=4, f=0, mid, item;
+clrscr();
+printf("enter seaching item:");
+scanf(%d",&item);
+
+while(lr<=up)
+{ 
+mid=(lr+up)/2;
+if(a[mid]==item)
+{
+if=1;
+break;
+
+}
+if(a[mid]<item)
+lr=mid+1;
+else
+up=mid-1;
+}
+if(f==1)
+printf("item found with location=%d",mid);
+else
+printf("not found");
+getch();
+}
+
+
+
+
